@@ -93,7 +93,7 @@ export default function CareerSection({ content }) {
         }
 
         <a
-          href="/docs/testFile.pdf"
+          href={`${import.meta.env.BASE_URL}docs/testFile.pdf`}
           download
           className="inline-flex items-center justify-center px-6 py-2 text-sm font-medium rounded-lg
                      bg-gh-green text-white transition-all duration-200

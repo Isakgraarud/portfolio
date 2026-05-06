@@ -30,7 +30,7 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    fetch('/docs/content.json')
+    fetch(`${import.meta.env.BASE_URL}docs/content.json`)
       .then((r) => r.json())
       .then(setContent)
       .catch(console.error)
