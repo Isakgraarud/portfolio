@@ -146,17 +146,17 @@ export default function HeroSection({ content }) {
           <div className="relative py-10 lg:py-0">
 
             {/* Selection bounding box */}
-            <div className="absolute -inset-4 lg:-inset-6 border border-white/[0.07] pointer-events-none">
+            <div className="absolute -inset-4 lg:-inset-6 border border-text/[0.07] pointer-events-none">
               {/* Corner square handles */}
-              <div className="absolute -top-[3px] -left-[3px]  w-[7px] h-[7px] bg-white/35" />
-              <div className="absolute -top-[3px] -right-[3px] w-[7px] h-[7px] bg-white/35" />
-              <div className="absolute -bottom-[3px] -left-[3px]  w-[7px] h-[7px] bg-white/35" />
-              <div className="absolute -bottom-[3px] -right-[3px] w-[7px] h-[7px] bg-white/35" />
+              <div className="absolute -top-[3px] -left-[3px]  w-[7px] h-[7px] bg-text/35" />
+              <div className="absolute -top-[3px] -right-[3px] w-[7px] h-[7px] bg-text/35" />
+              <div className="absolute -bottom-[3px] -left-[3px]  w-[7px] h-[7px] bg-text/35" />
+              <div className="absolute -bottom-[3px] -right-[3px] w-[7px] h-[7px] bg-text/35" />
               {/* Mid-side handles */}
-              <div className="absolute top-1/2 -translate-y-1/2 -left-[3px]  w-[7px] h-[4px] bg-white/20" />
-              <div className="absolute top-1/2 -translate-y-1/2 -right-[3px] w-[7px] h-[4px] bg-white/20" />
-              <div className="absolute left-1/2 -translate-x-1/2 -top-[3px]    w-[4px] h-[7px] bg-white/20" />
-              <div className="absolute left-1/2 -translate-x-1/2 -bottom-[3px] w-[4px] h-[7px] bg-white/20" />
+              <div className="absolute top-1/2 -translate-y-1/2 -left-[3px]  w-[7px] h-[4px] bg-text/20" />
+              <div className="absolute top-1/2 -translate-y-1/2 -right-[3px] w-[7px] h-[4px] bg-text/20" />
+              <div className="absolute left-1/2 -translate-x-1/2 -top-[3px]    w-[4px] h-[7px] bg-text/20" />
+              <div className="absolute left-1/2 -translate-x-1/2 -bottom-[3px] w-[4px] h-[7px] bg-text/20" />
             </div>
 
             {/* Small mono label */}

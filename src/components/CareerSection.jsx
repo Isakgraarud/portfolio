@@ -19,14 +19,13 @@ function ExpandItem({ title, meta, children }) {
       >
         {/* Left accent line */}
         <div
-          className="w-px flex-shrink-0 mt-1 transition-colors duration-300 self-stretch"
-          style={{ backgroundColor: open ? '#CAFF33' : '#1E1E26', minHeight: '20px' }}
+          className={`w-px flex-shrink-0 mt-1 transition-colors duration-300 self-stretch ${open ? 'bg-accent' : 'bg-border'}`}
+          style={{ minHeight: '20px' }}
         />
 
         <div className="flex-1 min-w-0">
           <span
-            className="font-sans font-semibold text-base transition-colors duration-200"
-            style={{ color: open ? '#CAFF33' : '#F0F0EE' }}
+            className={`font-sans font-semibold text-base transition-colors duration-200 ${open ? 'text-accent' : 'text-text'}`}
           >
             {title}
           </span>

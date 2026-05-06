@@ -4,16 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg:              '#0A0A0D',
-        surface:         '#111116',
-        elevated:        '#18181F',
-        border:          '#1E1E26',
-        'border-bright': '#2E2E3A',
-        text:            '#F0F0EE',
-        muted:           '#55555F',
-        'muted-bright':  '#888890',
-        accent:          '#CAFF33',
-        'accent-dim':    'rgba(202, 255, 51, 0.08)',
+        bg:              'rgb(var(--color-bg) / <alpha-value>)',
+        surface:         'rgb(var(--color-surface) / <alpha-value>)',
+        elevated:        'rgb(var(--color-elevated) / <alpha-value>)',
+        border:          'rgb(var(--color-border) / <alpha-value>)',
+        'border-bright': 'rgb(var(--color-border-bright) / <alpha-value>)',
+        text:            'rgb(var(--color-text) / <alpha-value>)',
+        muted:           'rgb(var(--color-muted) / <alpha-value>)',
+        'muted-bright':  'rgb(var(--color-muted-bright) / <alpha-value>)',
+        accent:          'rgb(var(--color-accent) / <alpha-value>)',
+        'accent-dim':    'rgb(var(--color-accent) / 0.08)',
       },
       fontFamily: {
         sans: ['"Space Grotesk"', 'system-ui', 'sans-serif'],

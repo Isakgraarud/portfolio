@@ -1,10 +1,36 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
 import { useLang, UI } from '../contexts/LanguageContext.jsx'
+import { useTheme } from '../contexts/ThemeContext.jsx'
+
+function SunIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </svg>
+  )
+}
+
+function MoonIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+  )
+}
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const { lang, toggle } = useLang()
+  const { theme, toggle: toggleTheme } = useTheme()
   const ui = UI[lang]
 
   useEffect(() => {
@@ -18,59 +44,74 @@ export default function Header() {
   }
 
   return (
-    <header
-      className={`fixed top-0 z-50 w-full transition-all duration-500 ${
-        scrolled
-          ? 'border-b border-border bg-bg/90 backdrop-blur-md'
-          : 'bg-transparent'
-      }`}
-    >
-      <nav className="flex items-center justify-between w-full max-w-[1400px] mx-auto px-8 py-4">
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="font-mono text-xs tracking-[0.25em] text-text hover:text-accent transition-colors duration-200"
-        >
-          IG_
-        </button>
+    <>
+      {/* Theme toggle — fixed far top-left */}
+      <motion.button
+        onClick={toggleTheme}
+        className="fixed top-4 right-4 z-[60] w-8 h-8 flex items-center justify-center
+                   text-muted hover:text-text border border-transparent hover:border-border-bright
+                   transition-all duration-200"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        aria-label="Toggle theme"
+      >
+        {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+      </motion.button>
 
-        <ul className="flex gap-8 list-none">
-          {[
-            { id: 'about',  label: ui.nav.about },
-            { id: 'projects', label: ui.nav.projects },
-            { id: 'career', label: ui.nav.career },
-            { id: 'github', label: ui.nav.github },
-          ].map(({ id, label }) => (
-            <li key={id}>
-              <button
-                onClick={() => scrollTo(id)}
-                className="font-mono text-[10px] tracking-[0.2em] text-muted hover:text-text transition-colors duration-200"
-              >
-                {label}
-              </button>
-            </li>
-          ))}
-        </ul>
-
-        <div className="flex items-center gap-3">
+      <header
+        className={`fixed top-0 z-50 w-full transition-all duration-500 ${
+          scrolled
+            ? 'border-b border-border bg-bg/90 backdrop-blur-md'
+            : 'bg-transparent'
+        }`}
+      >
+        <nav className="flex items-center justify-between w-full max-w-[1400px] mx-auto px-8 py-4">
           <button
-            onClick={toggle}
-            className="font-mono text-[10px] tracking-[0.18em] px-3 py-1.5 border border-border-bright text-muted
-                       hover:border-text hover:text-text transition-all duration-200"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="font-mono text-xs tracking-[0.25em] text-text hover:text-accent transition-colors duration-200"
           >
-            {ui.switchTo}
+            IG_
           </button>
 
-          <motion.a
-            href={`${import.meta.env.BASE_URL}docs/testFile.pdf`}
-            download
-            className="font-mono text-[10px] tracking-[0.18em] px-3 py-1.5 border border-accent/50 text-accent hover:bg-accent hover:text-bg transition-all duration-200"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-          >
-            CV.PDF
-          </motion.a>
-        </div>
-      </nav>
-    </header>
+          <ul className="flex gap-8 list-none">
+            {[
+              { id: 'about',    label: ui.nav.about },
+              { id: 'projects', label: ui.nav.projects },
+              { id: 'career',   label: ui.nav.career },
+              { id: 'github',   label: ui.nav.github },
+            ].map(({ id, label }) => (
+              <li key={id}>
+                <button
+                  onClick={() => scrollTo(id)}
+                  className="font-mono text-[10px] tracking-[0.2em] text-muted hover:text-text transition-colors duration-200"
+                >
+                  {label}
+                </button>
+              </li>
+            ))}
+          </ul>
+
+          <div className="flex items-center gap-3">
+            <button
+              onClick={toggle}
+              className="font-mono text-[10px] tracking-[0.18em] px-3 py-1.5 border border-border-bright text-muted
+                         hover:border-text hover:text-text transition-all duration-200"
+            >
+              {ui.switchTo}
+            </button>
+
+            <motion.a
+              href={`${import.meta.env.BASE_URL}docs/testFile.pdf`}
+              download
+              className="font-mono text-[10px] tracking-[0.18em] px-3 py-1.5 border border-accent/50 text-accent hover:bg-accent hover:text-bg transition-all duration-200"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              CV.PDF
+            </motion.a>
+          </div>
+        </nav>
+      </header>
+    </>
   )
 }
