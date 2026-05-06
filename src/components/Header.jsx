@@ -1,45 +1,63 @@
-const TABS = [
-  { id: 'about',  label: 'About Me' },
-  { id: 'github', label: 'Github' },
-  { id: 'career', label: 'Career' },
+import { useState, useEffect } from 'react'
+import { motion } from 'motion/react'
+
+const NAV = [
+  { id: 'about',  label: 'ABOUT'    },
+  { id: 'career', label: 'CAREER'   },
+  { id: 'github', label: 'PROJECTS' },
 ]
 
-export default function Header({ activeTab, onTabChange }) {
+export default function Header() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  function scrollTo(id) {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gh-border"
-            style={{ background: 'rgba(13,17,23,0.85)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
-      <nav className="relative flex items-center w-full max-w-[1200px] mx-auto px-8 py-4">
-        <a
-          href="#about"
-          onClick={(e) => { e.preventDefault(); onTabChange('about') }}
-          className="absolute left-4 text-white text-2xl font-semibold no-underline hover:opacity-90 transition-opacity"
+    <header
+      className={`fixed top-0 z-50 w-full transition-all duration-500 ${
+        scrolled
+          ? 'border-b border-border bg-bg/90 backdrop-blur-md'
+          : 'bg-transparent'
+      }`}
+    >
+      <nav className="flex items-center justify-between w-full max-w-[1400px] mx-auto px-8 py-4">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="font-mono text-xs tracking-[0.25em] text-text hover:text-accent transition-colors duration-200"
         >
-          IG
-        </a>
+          IG_
+        </button>
 
-        <div className="flex-1" />
-
-        <ul className="flex gap-1 list-none">
-          {TABS.map((tab) => (
-            <li key={tab.id}>
-              <a
-                href={`#${tab.id}`}
-                onClick={(e) => { e.preventDefault(); onTabChange(tab.id) }}
-                className={`
-                  relative inline-block px-4 py-2 pb-[10px] text-sm font-medium rounded-md
-                  transition-colors duration-200
-                  ${activeTab === tab.id
-                    ? 'text-gh-text nav-tab-active'
-                    : 'text-gh-text-secondary hover:text-gh-text'}
-                `}
+        <ul className="flex gap-8 list-none">
+          {NAV.map(({ id, label }) => (
+            <li key={id}>
+              <button
+                onClick={() => scrollTo(id)}
+                className="font-mono text-[10px] tracking-[0.2em] text-muted hover:text-text transition-colors duration-200"
               >
-                {tab.label}
-              </a>
+                {label}
+              </button>
             </li>
           ))}
         </ul>
 
-        <div className="flex-1" />
+        <motion.a
+          href={`${import.meta.env.BASE_URL}docs/testFile.pdf`}
+          download
+          className="font-mono text-[10px] tracking-[0.18em] px-3 py-1.5 border border-accent/50 text-accent hover:bg-accent hover:text-bg transition-all duration-200"
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          CV.PDF
+        </motion.a>
       </nav>
     </header>
   )

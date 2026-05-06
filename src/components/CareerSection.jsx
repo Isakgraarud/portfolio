@@ -1,107 +1,164 @@
-import { useState } from 'react'
-import { useScrollReveal } from '../hooks/useScrollReveal.js'
+import { useState, useRef } from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { motion, AnimatePresence } from 'motion/react'
 
-function ExpandableItem({ header, meta, children }) {
+gsap.registerPlugin(ScrollTrigger)
+
+function ExpandItem({ title, meta, children }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <li className="border-b border-gh-border-muted last:border-b-0">
+    <div className="border-b border-border last:border-b-0">
       <button
         type="button"
-        onClick={() => setOpen((o) => !o)}
-        aria-expanded={open}
-        className="flex items-center justify-between w-full px-6 py-4 text-left
-                   bg-transparent border-none cursor-pointer font-[inherit] text-[inherit]
-                   transition-colors duration-200 hover:bg-[rgba(48,54,61,0.3)]
-                   focus-visible:outline-2 focus-visible:outline-gh-green focus-visible:outline-offset-2"
+        onClick={() => setOpen(o => !o)}
+        className="flex items-start gap-4 w-full py-5 text-left group"
       >
-        <span className="font-semibold text-gh-text flex-1 min-w-0">{header}</span>
-        <span className="text-sm text-gh-text-secondary mx-4 shrink-0">{meta}</span>
-        <span
-          className={`text-xl text-gh-text-muted shrink-0 transition-transform duration-200
-                      ${open ? 'rotate-90' : 'rotate-0'}`}
-          aria-hidden="true"
+        {/* Left accent line */}
+        <div
+          className="w-px flex-shrink-0 mt-1 transition-colors duration-300 self-stretch"
+          style={{ backgroundColor: open ? '#CAFF33' : '#1E1E26', minHeight: '20px' }}
+        />
+
+        <div className="flex-1 min-w-0">
+          <span
+            className="font-sans font-semibold text-base transition-colors duration-200"
+            style={{ color: open ? '#CAFF33' : '#F0F0EE' }}
+          >
+            {title}
+          </span>
+          <span className="block font-mono text-[10px] text-muted mt-1 tracking-wide">
+            {meta}
+          </span>
+        </div>
+
+        <motion.span
+          animate={{ rotate: open ? 45 : 0 }}
+          transition={{ duration: 0.2, ease: 'easeOut' }}
+          className="font-mono text-xl text-muted group-hover:text-muted-bright transition-colors mt-0.5 shrink-0"
         >
-          ›
-        </span>
+          +
+        </motion.span>
       </button>
 
-      {open && (
-        <div className="border-t border-gh-border-muted px-6 py-3">
-          {children}
-        </div>
-      )}
-    </li>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            key="content"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.28, ease: [0.25, 1, 0.5, 1] }}
+            className="overflow-hidden"
+          >
+            <div className="pl-5 pb-6">
+              {children}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   )
 }
 
-function EducationList({ education }) {
+function SectionLabel({ number, title }) {
   return (
-    <ul className="flex flex-col gap-4 mb-8 list-none">
-      {education.map((edu, i) => (
-        <ExpandableItem key={i} header={edu.name} meta={edu.meta}>
-          <ul className="flex flex-col gap-2 list-none">
-            {(edu.courses ?? []).map((c, j) => (
-              <li key={j} className="flex justify-between items-center px-4 py-2
-                                     border-b border-gh-border-muted last:border-b-0">
-                <span className="font-medium text-gh-text text-sm">{c.name}</span>
-                <span className="text-sm text-gh-text-secondary">{c.meta}</span>
-              </li>
-            ))}
-          </ul>
-        </ExpandableItem>
-      ))}
-    </ul>
-  )
-}
-
-function CareerList({ career }) {
-  return (
-    <ul className="flex flex-col gap-4 mb-8 list-none">
-      {career.map((job, i) => {
-        const meta = [job.company, job.period].filter(Boolean).join(' • ')
-        return (
-          <ExpandableItem key={i} header={job.title ?? job.name} meta={meta ?? job.meta}>
-            {job.description && (
-              <p className="text-[0.9375rem] text-gh-text-secondary leading-relaxed mb-4">
-                {job.description}
-              </p>
-            )}
-          </ExpandableItem>
-        )
-      })}
-    </ul>
+    <div className="flex items-center gap-4 mb-8">
+      <span className="font-mono text-[10px] text-muted">{number}</span>
+      <div className="flex-1 h-px bg-border" />
+      <span className="font-mono text-[10px] text-muted tracking-[0.22em] uppercase">{title}</span>
+    </div>
   )
 }
 
 export default function CareerSection({ content }) {
-  const ref = useScrollReveal([content])
+  const ref = useRef(null)
+
+  useGSAP(() => {
+    if (!content) return
+    gsap.utils.toArray('.career-reveal', ref.current).forEach((el, i) => {
+      gsap.from(el, {
+        y: 32, opacity: 0, duration: 0.7, delay: i * 0.06,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: el, start: 'top 88%', toggleActions: 'play none none none',
+        },
+      })
+    })
+  }, { scope: ref, dependencies: [content] })
 
   return (
-    <section ref={ref} className="w-full">
-      <div className="animate-on-scroll w-full max-w-[70%] mx-auto">
-        <h1 className="text-4xl font-semibold mb-4 text-gh-text">Education</h1>
-        {content?.education
-          ? <EducationList education={content.education} />
-          : <p className="text-gh-text-secondary">Loading…</p>
-        }
+    <section ref={ref} id="career" className="w-full py-24 lg:py-32 border-t border-border">
+      <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
 
-        <h1 className="text-4xl font-semibold mb-4 text-gh-text">Professional Experience</h1>
-        {content?.career
-          ? <CareerList career={content.career} />
-          : <p className="text-gh-text-secondary">Loading…</p>
-        }
+        {/* ── Experience ────────────────────────────────── */}
+        <div className="career-reveal mb-16">
+          <SectionLabel number="02" title="EXPERIENCE" />
+          <div>
+            {content?.career
+              ? content.career.map((job, i) => (
+                  <ExpandItem
+                    key={i}
+                    title={job.title ?? job.name}
+                    meta={[job.company, job.period].filter(Boolean).join(' · ')}
+                  >
+                    {job.description && (
+                      <p className="font-mono text-[11px] text-muted leading-relaxed">
+                        {job.description}
+                      </p>
+                    )}
+                  </ExpandItem>
+                ))
+              : <p className="font-mono text-xs text-muted">Loading…</p>
+            }
+          </div>
+        </div>
 
-        <a
-          href={`${import.meta.env.BASE_URL}docs/testFile.pdf`}
-          download
-          className="inline-flex items-center justify-center px-6 py-2 text-sm font-medium rounded-lg
-                     bg-gh-green text-white transition-all duration-200
-                     hover:bg-gh-green-hover hover:-translate-y-px
-                     hover:shadow-[0_4px_12px_rgba(46,164,79,0.25)]"
-        >
-          Download CV (PDF)
-        </a>
+        {/* ── Education ─────────────────────────────────── */}
+        <div className="career-reveal mb-16">
+          <SectionLabel number="03" title="EDUCATION" />
+          <div>
+            {content?.education
+              ? content.education.map((edu, i) => (
+                  <ExpandItem key={i} title={edu.name} meta={edu.meta}>
+                    {edu.courses && (
+                      <ul className="space-y-2 mt-2">
+                        {edu.courses.filter(c => c.name).map((c, j) => (
+                          <li key={j} className="flex items-center justify-between gap-4">
+                            <span className="font-mono text-[10px] text-muted/80 flex-1">{c.name}</span>
+                            <span className="font-mono text-[10px] text-muted/45 shrink-0">{c.meta}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </ExpandItem>
+                ))
+              : <p className="font-mono text-xs text-muted">Loading…</p>
+            }
+          </div>
+        </div>
+
+        {/* CV download */}
+        <div className="career-reveal">
+          <motion.a
+            href={`${import.meta.env.BASE_URL}docs/testFile.pdf`}
+            download
+            className="inline-flex items-center gap-3 font-mono text-[10px] tracking-[0.15em]
+                       px-6 py-3 border border-accent/40 text-accent
+                       hover:bg-accent hover:text-bg transition-all duration-200"
+            whileHover={{ scale: 1.02, y: -1 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            DOWNLOAD FULL CV
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+              <path d="M5.5 1v6M3 4.5l2.5 2.5 2.5-2.5M1 10h9"
+                stroke="currentColor" strokeWidth="1.2"
+                strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </motion.a>
+        </div>
       </div>
     </section>
   )
