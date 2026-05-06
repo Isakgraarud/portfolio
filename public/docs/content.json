@@ -1,88 +1,119 @@
 {
   "about": {
-  "image": "images/CroppedUmbrellaInBergen.jpeg",
-  "intro": "I am a 23-year-old BSc student from Oslo, Norway. \n\n My professional journey began at Elvebakken High School (Class of 2022), before continuing into the Royal Norwegian Air Force. I served as an OR1 before I was promoted to OR2 at the Wing Operations Centers in Bardufoss and Ørland. In the Air Force I developed a disciplined and structured approach to technical problem-solving under pressure, an approach I now try to apply to my BSc studies in Informatics: Data Technology.\n\n",
-  "story": "Beyond the classroom in Bergen, I am actively engaged in the student community. I serve as Treasurer/Finance Manager and Board Member of the ECHO Sports Club (ESC), where I am responsible for the economy and budgeting, in addition to lead our padel group. \n\n Furthermore, I am a board member of Hyggkom, where I help organize social activities that foster a healthy balance between demanding studies and a strong social environment within our faculty’s reading rooms. \n\n I have always been interested in the technical aspects of the world, which have strongly influenced my choice of education. Recently, I have developed a particular interest in game development and graphics programming. I am currently working on a game project called “Arabat”* in my spare time (available on my GitHub). \n\n During my time in the Air Force, I had the opportunity to fly both single-engine aircraft and helicopters. My long-term ambition is to turn this passion for aviation into reality by obtaining a Private Pilot License (PPL)."
+    "image": "images/CroppedUmbrellaInBergen.jpeg"
   },
   "socials": {
-    "github": "https://github.com/Isakgraarud",
+    "github":   "https://github.com/Isakgraarud",
     "linkedin": "https://www.linkedin.com/in/isak-graarud",
-    "email": "mailto:isak.graarud@gmail.com"
+    "email":    "mailto:isak.graarud@gmail.com"
   },
   "education": [
     {
       "name": "BSc in Informatics: Data Technology",
-      "meta": "University of Bergen (UiB) • 2024 – 2027",
+      "meta": "University of Bergen (UiB) · 2024 – 2027",
       "courses": [
-        {"name":  "", "meta": "2027" },
-        {"name":  "", "meta": "2027" },
-        {"name":  "", "meta": "2027" },
-
-        { "name":  "", "meta": "2026" },
-        { "name": "INF226 – Software Security", "meta": "2026" },
-        { "name": "INF214 – Concurrent Programming", "meta": "2026" },
-
-        { "name": "INF222 – Programming Languages", "meta": "2026" },
-        { "name": "Examen Philosophicum", "meta": "2026" },
+        { "name": "",                                              "meta": "2027" },
+        { "name": "",                                              "meta": "2027" },
+        { "name": "",                                              "meta": "2027" },
+        { "name": "",                                              "meta": "2026" },
+        { "name": "INF226 – Software Security",                   "meta": "2026" },
+        { "name": "INF214 – Concurrent Programming",              "meta": "2026" },
+        { "name": "INF222 – Programming Languages",               "meta": "2026" },
+        { "name": "Examen Philosophicum",                         "meta": "2026" },
         { "name": "INF112 – Introduction to Systems Development", "meta": "2026" },
-
-        { "name": "INF122 – Functional Programming", "meta": "2025" },
-        { "name": "INF113 – Introduction to Operating Systems", "meta": "2025" },
+        { "name": "INF122 – Functional Programming",              "meta": "2025" },
+        { "name": "INF113 – Introduction to Operating Systems",   "meta": "2025" },
         { "name": "INF102 – Algorithms, Data Structures and Programming", "meta": "2025" },
-
-        { "name": "INF115 – Databases and Modelling", "meta": "2025" },
-        { "name": "MNF130 – Discrete Structures", "meta": "2025" },
-        { "name": "INF101 – Programming II", "meta": "2025" },
-
-        { "name": "MAT101 – Elementary Calculus I", "meta": "2024" },
-        { "name": "INF140 – Introduction to Cybersecurity", "meta": "2024" },
-        { "name": "INF100 – Introduction to Programming", "meta": "2024" }
+        { "name": "INF115 – Databases and Modelling",             "meta": "2025" },
+        { "name": "MNF130 – Discrete Structures",                 "meta": "2025" },
+        { "name": "INF101 – Programming II",                      "meta": "2025" },
+        { "name": "MAT101 – Elementary Calculus I",               "meta": "2024" },
+        { "name": "INF140 – Introduction to Cybersecurity",       "meta": "2024" },
+        { "name": "INF100 – Introduction to Programming",         "meta": "2024" }
       ]
     },
     {
       "name": "Electrical Power and Electronic Communication",
-      "meta": "Elvebakken High School • 2019 – 2022",
+      "meta": "Elvebakken High School · 2019 – 2022",
       "courses": [
-        { "name": "REA3064 – Programmering og modellering X", "meta": "2022" },
-        { "name": "REA3038 – Fysikk 1", "meta": "2022" },
-        { "name": "NOR1211/12/13 – Norsk (Hovedmål, sidemål, muntlig)", "meta": "2022" },
-        { "name": "HIS1003 – Historie", "meta": "2022" },
-        { "name": "SAK1001 – Samfunnskunnskap", "meta": "2022" },
-        { "name": "REA3022 – Matematikk R1", "meta": "2021" },
+        { "name": "REA3064 – Programmering og modellering X",               "meta": "2022" },
+        { "name": "REA3038 – Fysikk 1",                                     "meta": "2022" },
+        { "name": "NOR1211/12/13 – Norsk (Hovedmål, sidemål, muntlig)",     "meta": "2022" },
+        { "name": "HIS1003 – Historie",                                      "meta": "2022" },
+        { "name": "SAK1001 – Samfunnskunnskap",                              "meta": "2022" },
+        { "name": "REA3022 – Matematikk R1",                                 "meta": "2021" },
         { "name": "ELE2001/2/3 – Elenergi-, automatiserings- og datasystemer vg2", "meta": "2021" },
-        { "name": "ELE2004 – Tverrfaglig eksamen", "meta": "2021" },
-        { "name": "ENG1009 – Engelsk", "meta": "2021" },
-        { "name": "MAT1013 – Matematikk 1T", "meta": "2020" },
-        { "name": "NAT1002 – Naturfag", "meta": "2020" },
+        { "name": "ELE2004 – Tverrfaglig eksamen",                           "meta": "2021" },
+        { "name": "ENG1009 – Engelsk",                                       "meta": "2021" },
+        { "name": "MAT1013 – Matematikk 1T",                                 "meta": "2020" },
+        { "name": "NAT1002 – Naturfag",                                      "meta": "2020" },
         { "name": "ELE1001/2/3 – Data-, elenergi- og automatiseringssystemer vg1", "meta": "2020" },
-        { "name": "YFF4106/4207 – Yrkesfaglig fordypning (vg1 & vg2)", "meta": "2020–2021" }
+        { "name": "YFF4106/4207 – Yrkesfaglig fordypning (vg1 & vg2)",      "meta": "2020–2021" }
       ]
     }
   ],
-  "career": [
-    {
-      "title": "Visespesialist (OR2)",
-      "company": "Luftforsvaret (Ørland flystasjon)",
-      "period": "April 2024 - August 2024",
-      "description": "Operasjonsromsspesialist med ansvar for håndtering av besøkende flyvninger og daglig drift av flyplassen. Fungerte som befal for vernepliktige med ansvar for rominspeksjon og vaktplanlegging."
+  "en": {
+    "about": {
+      "intro": "I'm a 23-year-old computer science student at the University of Bergen, combining a background in military service and community leadership with a genuine passion for software and systems.",
+      "story": "After serving as an Operations Specialist (OR2) in the Royal Norwegian Air Force — managing airspace operations at Bardufoss and Ørland — I brought that discipline and precision into my BSc in Informatics: Data Technology at UiB.\n\nOn campus, I serve as Treasurer of the ECHO Sports Club and as a board member of Hyggkom, where I help organise the student community for our faculty.\n\nMy technical interests centre on game development and graphics programming. I'm currently building a game called Arabat in my spare time, available on GitHub. Longer-term, I'm working toward a Private Pilot License."
     },
-    {
-      "title": "Vernepliktig (OR1/OR1+)",
-      "company": "Luftforsvaret (Bardufoss flyplass)",
-      "period": "April 2023 - April 2024",
-      "description": "Drift av operasjonsrommet, håndtering av besøkende flyvninger, loggføring og allokering av slots."
+    "career": [
+      {
+        "title": "Operations Specialist (OR2)",
+        "company": "Royal Norwegian Air Force – Ørland Air Base",
+        "period": "April 2024 – August 2024",
+        "description": "Operations room specialist responsible for managing visiting flights and daily airfield operations. Acted as NCO for conscripts, overseeing room inspections and duty scheduling."
+      },
+      {
+        "title": "Conscript (OR1/OR1+)",
+        "company": "Royal Norwegian Air Force – Bardufoss Airport",
+        "period": "April 2023 – April 2024",
+        "description": "Operated the operations room, coordinated visiting flights, maintained flight logs, and allocated landing slots."
+      },
+      {
+        "title": "Kindergarten Substitute",
+        "company": "Personalhuset Norway",
+        "period": "September 2022 – April 2023",
+        "description": "Assisted with play, meals, and daily routines, contributing to a safe and structured environment for children."
+      },
+      {
+        "title": "Sports Instructor – All Sports",
+        "company": "Sagene Sports Club",
+        "period": "August 2021 – August 2022",
+        "description": "Led groups of approximately 30 children aged 3–5, planning and running varied physical activities as primary instructor."
+      }
+    ]
+  },
+  "no": {
+    "about": {
+      "intro": "Jeg er en 23-årig informatikkstudent ved Universitetet i Bergen med bakgrunn fra militærtjeneste og studentorganisasjon — og et genuint engasjement for programvare og systemer.",
+      "story": "Etter å ha tjenestegjort som spesialist (OR2) i Luftforsvaret — med ansvar for luftromsoperasjoner ved Bardufoss og Ørland — tok jeg med meg denne disiplinen inn i BSc-studiet i informatikk: data-teknologi ved UiB.\n\nPå campus er jeg kasserer i ECHO Idrettsklubb og styremedlem i Hyggkom, der jeg bidrar til å organisere studentmiljøet på vår fakultet.\n\nTeknisk sett er jeg spesielt interessert i spillutvikling og grafikkprogrammering. Jeg jobber med et spillprosjekt kalt Arabat på fritiden, tilgjengelig på GitHub. Langsiktig er jeg på vei mot et privatflysertifikat (PPL)."
     },
-    {
-      "title": "Barnehagevikar",
-      "company": "Personalhuset Norway",
-      "period": "September 2022 - April 2023",
-      "description": "Deltakelse i lek og aktiviteter, assistanse ved måltider/påkledning, og bidrag til trygghet og gode rutiner."
-    },
-    {
-      "title": "Instruktør Allidrett",
-      "company": "Sagene Idrettsforening",
-      "period": "August 2021 - August 2022",
-      "description": "Hovedansvar for grupper på ca. 30 barn (3-5 år). Forberedelse og ledelse av ulike fysiske aktiviteter."
-    }
-  ]
+    "career": [
+      {
+        "title": "Visespesialist (OR2)",
+        "company": "Luftforsvaret – Ørland flystasjon",
+        "period": "April 2024 – August 2024",
+        "description": "Operasjonsromsspesialist med ansvar for håndtering av besøkende flyvninger og daglig drift av flyplassen. Fungerte som befal for vernepliktige med ansvar for rominspeksjon og vaktplanlegging."
+      },
+      {
+        "title": "Vernepliktig (OR1/OR1+)",
+        "company": "Luftforsvaret – Bardufoss flyplass",
+        "period": "April 2023 – April 2024",
+        "description": "Drift av operasjonsrommet, håndtering av besøkende flyvninger, loggføring og allokering av slots."
+      },
+      {
+        "title": "Barnehagevikar",
+        "company": "Personalhuset Norway",
+        "period": "September 2022 – April 2023",
+        "description": "Deltakelse i lek og aktiviteter, assistanse ved måltider og påkledning, og bidrag til trygghet og gode rutiner."
+      },
+      {
+        "title": "Instruktør Allidrett",
+        "company": "Sagene Idrettsforening",
+        "period": "August 2021 – August 2022",
+        "description": "Hovedansvar for grupper på ca. 30 barn (3–5 år). Forberedelse og ledelse av ulike fysiske aktiviteter."
+      }
+    ]
+  }
 }

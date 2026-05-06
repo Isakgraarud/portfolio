@@ -1,14 +1,11 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
-
-const NAV = [
-  { id: 'about',  label: 'ABOUT'    },
-  { id: 'career', label: 'CAREER'   },
-  { id: 'github', label: 'PROJECTS' },
-]
+import { useLang, UI } from '../contexts/LanguageContext.jsx'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
+  const { lang, toggle } = useLang()
+  const ui = UI[lang]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -37,7 +34,11 @@ export default function Header() {
         </button>
 
         <ul className="flex gap-8 list-none">
-          {NAV.map(({ id, label }) => (
+          {[
+            { id: 'about',  label: ui.nav.about    },
+            { id: 'career', label: ui.nav.career   },
+            { id: 'github', label: ui.nav.projects },
+          ].map(({ id, label }) => (
             <li key={id}>
               <button
                 onClick={() => scrollTo(id)}
@@ -49,15 +50,25 @@ export default function Header() {
           ))}
         </ul>
 
-        <motion.a
-          href={`${import.meta.env.BASE_URL}docs/testFile.pdf`}
-          download
-          className="font-mono text-[10px] tracking-[0.18em] px-3 py-1.5 border border-accent/50 text-accent hover:bg-accent hover:text-bg transition-all duration-200"
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-        >
-          CV.PDF
-        </motion.a>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={toggle}
+            className="font-mono text-[10px] tracking-[0.18em] px-3 py-1.5 border border-border-bright text-muted
+                       hover:border-text hover:text-text transition-all duration-200"
+          >
+            {ui.switchTo}
+          </button>
+
+          <motion.a
+            href={`${import.meta.env.BASE_URL}docs/testFile.pdf`}
+            download
+            className="font-mono text-[10px] tracking-[0.18em] px-3 py-1.5 border border-accent/50 text-accent hover:bg-accent hover:text-bg transition-all duration-200"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            CV.PDF
+          </motion.a>
+        </div>
       </nav>
     </header>
   )

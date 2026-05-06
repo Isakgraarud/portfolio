@@ -3,6 +3,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion, AnimatePresence } from 'motion/react'
+import { useLang, UI } from '../contexts/LanguageContext.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -75,6 +76,8 @@ function SectionLabel({ number, title }) {
 
 export default function CareerSection({ content }) {
   const ref = useRef(null)
+  const { lang } = useLang()
+  const ui = UI[lang]
 
   useGSAP(() => {
     if (!content) return
@@ -95,10 +98,10 @@ export default function CareerSection({ content }) {
 
         {/* ── Experience ────────────────────────────────── */}
         <div className="career-reveal mb-16">
-          <SectionLabel number="02" title="EXPERIENCE" />
+          <SectionLabel number="02" title={ui.sections.experience} />
           <div>
-            {content?.career
-              ? content.career.map((job, i) => (
+            {content?.[lang]?.career
+              ? content[lang].career.map((job, i) => (
                   <ExpandItem
                     key={i}
                     title={job.title ?? job.name}
@@ -118,7 +121,7 @@ export default function CareerSection({ content }) {
 
         {/* ── Education ─────────────────────────────────── */}
         <div className="career-reveal mb-16">
-          <SectionLabel number="03" title="EDUCATION" />
+          <SectionLabel number="03" title={ui.sections.education} />
           <div>
             {content?.education
               ? content.education.map((edu, i) => (
@@ -151,7 +154,7 @@ export default function CareerSection({ content }) {
             whileHover={{ scale: 1.02, y: -1 }}
             whileTap={{ scale: 0.98 }}
           >
-            DOWNLOAD FULL CV
+            {ui.downloadCV}
             <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
               <path d="M5.5 1v6M3 4.5l2.5 2.5 2.5-2.5M1 10h9"
                 stroke="currentColor" strokeWidth="1.2"
