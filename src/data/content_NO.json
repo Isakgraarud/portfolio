@@ -60,6 +60,17 @@
       ]
     }
   ],
+  "hero": {
+    "tags": ["BSc Informatikk · UiB", "Bergen, Norge", "Game Dev · Arabat", "PPL-aspirant"]
+  },
+  "githubSection": {
+    "heading": "Open Source\n& Prosjekter",
+    "description": "Spillutvikling, grafikk-programmering, verktøy. Alle mine aktive prosjekter — live på GitHub.",
+    "cta": "SE GITHUB-PROFIL",
+    "featured": { "label": "FEATURED",       "value": "Zoombigedon",     "sub": "Game project · Java / libGDX" },
+    "focus":    { "label": "FOCUS",          "value": "Algorithms / Game development", "sub": "Visual programming & game dev" },
+    "profile":  { "label": "GITHUB PROFILE", "value": "Isakgraarud",     "sub": "github.com" }
+  },
   "career": [
     {
       "title": "Operasjonsspesialist (OR2)",

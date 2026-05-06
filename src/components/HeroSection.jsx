@@ -3,6 +3,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Spline from '@splinetool/react-spline'
 import { motion } from 'motion/react'
+import { useLang, UI } from '../contexts/LanguageContext.jsx'
 
 class SplineBoundary extends Component {
   state = { failed: false }
@@ -100,11 +101,13 @@ function OrbitFallback({ visible }) {
   )
 }
 
-export default function HeroSection() {
+export default function HeroSection({ content }) {
   const containerRef = useRef(null)
   const nameRef     = useRef(null)
   const surnameRef  = useRef(null)
   const [splineLoaded, setSplineLoaded] = useState(false)
+  const { lang } = useLang()
+  const ui = UI[lang]
 
   useEffect(() => {
     if (nameRef.current)    scramble(nameRef.current,    'ISAK',    200)
@@ -158,7 +161,7 @@ export default function HeroSection() {
 
             {/* Small mono label */}
             <p className="h-tag font-mono text-[10px] text-muted tracking-[0.22em] mb-5 uppercase">
-              Portfolio_v2025 · Software Developer
+              {ui.hero.label}
             </p>
 
             {/* ISAK GRAARUD — giant text */}
@@ -186,12 +189,7 @@ export default function HeroSection() {
 
             {/* Tag pills */}
             <div className="flex flex-wrap gap-2 mt-8 lg:mt-10">
-              {[
-                'BSc Informatics · UiB',
-                'Bergen, Norway',
-                'Game Dev · Arabat',
-                'PPL Aspirant',
-              ].map(tag => (
+              {(content?.hero?.tags ?? []).map(tag => (
                 <span
                   key={tag}
                   className="h-tag font-mono text-[10px] px-3 py-1 border border-border-bright text-muted
@@ -223,7 +221,7 @@ export default function HeroSection() {
 
             {/* Monospace annotations */}
             <div className="absolute top-3 right-0 font-mono text-[10px] text-muted text-right space-y-1.5 pointer-events-none">
-              {['** SOFTWARE DEVELOPER', '** GAME DEV ENTHUSIAST', '** AVIATION NERD'].map(n => (
+              {ui.hero.annotations.map(n => (
                 <p key={n} className="h-note">{n}</p>
               ))}
             </div>
@@ -234,7 +232,7 @@ export default function HeroSection() {
         <div className="mt-16 lg:mt-20 flex items-center gap-4">
           <div className="flex-1 h-px bg-border" />
           <span className="h-bottom font-mono text-[10px] text-muted tracking-[0.22em]">
-            SCROLL TO EXPLORE
+            {ui.hero.scrollExplore}
           </span>
           <div className="w-8 h-px bg-border" />
         </div>
@@ -245,7 +243,7 @@ export default function HeroSection() {
         <div className="relative w-px h-10 bg-border overflow-hidden">
           <div className="absolute inset-0 bg-accent animate-scrollLine" />
         </div>
-        <span className="font-mono text-[10px] text-muted tracking-[0.22em]">SCROLL</span>
+        <span className="font-mono text-[10px] text-muted tracking-[0.22em]">{ui.hero.scroll}</span>
       </div>
 
       {/* CV download — bottom right */}

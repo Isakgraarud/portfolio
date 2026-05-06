@@ -75,25 +75,34 @@ function SectionLabel({ number, title }) {
 }
 
 export default function CareerSection({ content }) {
-  const ref = useRef(null)
+  const ref         = useRef(null)
+  const revealedRef = useRef(new Set())
   const { lang } = useLang()
   const ui = UI[lang]
 
   useGSAP(() => {
     if (!content) return
     gsap.utils.toArray('.career-reveal', ref.current).forEach((el, i) => {
+      const rect = el.getBoundingClientRect()
+      const alreadyVisible = revealedRef.current.has(el) || rect.top < window.innerHeight * 0.88
+      if (alreadyVisible) {
+        revealedRef.current.add(el)
+        gsap.set(el, { y: 0, opacity: 1 })
+        return
+      }
       gsap.from(el, {
         y: 32, opacity: 0, duration: 0.7, delay: i * 0.06,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: el, start: 'top 88%', toggleActions: 'play none none none',
+          onEnter: () => revealedRef.current.add(el),
         },
       })
     })
   }, { scope: ref, dependencies: [content] })
 
   return (
-    <section ref={ref} id="career" className="w-full py-24 lg:py-32 border-t border-border">
+    <section ref={ref} id="career" className="w-full py-24 lg:py-32 border-t border-border scroll-mt-20">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
 
         {/* ── Experience ────────────────────────────────── */}

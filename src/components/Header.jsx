@@ -14,7 +14,7 @@ export default function Header() {
   }, [])
 
   function scrollTo(id) {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   return (
@@ -35,9 +35,10 @@ export default function Header() {
 
         <ul className="flex gap-8 list-none">
           {[
-            { id: 'about',  label: ui.nav.about    },
-            { id: 'career', label: ui.nav.career   },
-            { id: 'github', label: ui.nav.projects },
+            { id: 'about',  label: ui.nav.about },
+            { id: 'projects', label: ui.nav.projects },
+            { id: 'career', label: ui.nav.career },
+            { id: 'github', label: ui.nav.github },
           ].map(({ id, label }) => (
             <li key={id}>
               <button

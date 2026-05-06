@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { LanguageProvider, useLang } from './contexts/LanguageContext.jsx'
@@ -7,30 +7,26 @@ import HeroSection from './components/HeroSection.jsx'
 import AboutSection from './components/AboutSection.jsx'
 import CareerSection from './components/CareerSection.jsx'
 import GithubSection from './components/GithubSection.jsx'
+import contentEN from './data/content_EN.json'
+import contentNO from './data/content_NO.json'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const contentMap = { en: contentEN, no: contentNO }
+
 function AppContent() {
   const { lang } = useLang()
-  const [content, setContent] = useState(null)
+  const content = contentMap[lang]
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}docs/content_${lang.toUpperCase()}.json`)
-      .then(r => r.json())
-      .then(setContent)
-      .catch(console.error)
-  }, [lang])
-
-  useEffect(() => {
-    if (!content) return
     const raf = requestAnimationFrame(() => ScrollTrigger.refresh())
     return () => cancelAnimationFrame(raf)
-  }, [content])
+  }, [lang])
 
   return (
     <div className="min-h-screen bg-bg text-text font-sans">
       <Header />
-      <HeroSection />
+      <HeroSection content={content} />
       <AboutSection content={content} />
       <CareerSection content={content} />
       <GithubSection content={content} />

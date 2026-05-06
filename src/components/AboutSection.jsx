@@ -9,7 +9,8 @@ import ProjectShowcase from './ProjectShowcase.jsx'
 gsap.registerPlugin(ScrollTrigger)
 
 export default function AboutSection({ content }) {
-  const ref   = useRef(null)
+  const ref        = useRef(null)
+  const revealedRef = useRef(new Set())
   const { lang } = useLang()
   const ui = UI[lang]
 
@@ -20,18 +21,26 @@ export default function AboutSection({ content }) {
   useGSAP(() => {
     if (!content) return
     gsap.utils.toArray('.about-reveal', ref.current).forEach((el, i) => {
+      const rect = el.getBoundingClientRect()
+      const alreadyVisible = revealedRef.current.has(el) || rect.top < window.innerHeight * 0.88
+      if (alreadyVisible) {
+        revealedRef.current.add(el)
+        gsap.set(el, { y: 0, opacity: 1 })
+        return
+      }
       gsap.from(el, {
         y: 36, opacity: 0, duration: 0.75, delay: i * 0.04,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: el, start: 'top 88%', toggleActions: 'play none none none',
+          onEnter: () => revealedRef.current.add(el),
         },
       })
     })
   }, { scope: ref, dependencies: [content] })
 
   return (
-    <section ref={ref} id="about" className="w-full py-24 lg:py-32 relative">
+    <section ref={ref} id="about" className="w-full py-24 lg:py-32 relative scroll-mt-20">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
 
         {/* Section header */}
@@ -106,7 +115,7 @@ export default function AboutSection({ content }) {
         </div>
 
         {/* Project photos */}
-        <div className="about-reveal mt-24">
+        <div id="projects" className="about-reveal mt-24 scroll-mt-20">
           <div className="flex items-center gap-4 mb-6">
             <span className="font-mono text-[10px] text-muted tracking-[0.22em]">{ui.sections.projects}</span>
             <div className="flex-1 h-px bg-border" />
