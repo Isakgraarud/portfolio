@@ -1,8 +1,8 @@
 {
   "about": {
-  "image": "images/CroppedUmbrellaInBergen.jpeg",
-  "intro": "I am a 23-year-old BSc student from Oslo, Norway. \n\n My professional journey began at Elvebakken High School (Class of 2022), before continuing into the Royal Norwegian Air Force. I served as an OR1 before I was promoted to OR2 at the Wing Operations Centers in Bardufoss and Ørland. In the Air Force I developed a disciplined and structured approach to technical problem-solving under pressure, an approach I now try to apply to my BSc studies in Informatics: Data Technology.\n\n",
-  "story": "Beyond the classroom in Bergen, I am actively engaged in the student community. I serve as Treasurer/Finance Manager and Board Member of the ECHO Sports Club (ESC), where I am responsible for the economy and budgeting, in addition to lead our padel group. \n\n Furthermore, I am a board member of Hyggkom, where I help organize social activities that foster a healthy balance between demanding studies and a strong social environment within our faculty’s reading rooms. \n\n I have always been interested in the technical aspects of the world, which have strongly influenced my choice of education. Recently, I have developed a particular interest in game development and graphics programming. I am currently working on a game project called “Arabat”* in my spare time (available on my GitHub). \n\n During my time in the Air Force, I had the opportunity to fly both single-engine aircraft and helicopters. My long-term ambition is to turn this passion for aviation into reality by obtaining a Private Pilot License (PPL)."
+    "image": "images/CroppedUmbrellaInBergen.jpeg",
+    "intro": "Jeg er en 23 år gammel bachelorstudent fra Oslo, Norge. \n\nMin faglige reise begynte på Elvebakken videregående skole (avgang 2022), før jeg fortsatte til Luftforsvaret. Jeg tjenestegjorde som OR1 før jeg ble forfremmet til OR2 ved Wing Operations Centers på Bardufoss og Ørland. I Forsvaret utviklet jeg en disiplinert og strukturert tilnærming til teknisk problemløsning under press – en tilnærming jeg nå forsøker å anvende i mitt bachelorstudium i informatikk: datateknologi.\n\n",
+    "story": "Utenfor klasserommet i Bergen er jeg aktivt engasjert i studentmiljøet. Jeg er kasserer/økonomiansvarlig og styremedlem i ECHO Sports Club (ESC), der jeg er ansvarlig for økonomi og budsjettering, samt leder av padelgruppen vår. \n\nVidere er jeg styremedlem i Hyggkom, der jeg bidrar til å organisere sosiale aktiviteter som fremmer en god balanse mellom krevende studier og et sterkt sosialt miljø i fakultetets lesesaler. \n\nJeg har alltid vært interessert i de tekniske aspektene ved verden, noe som har hatt stor innflytelse på mitt utdanningsvalg. Den siste tiden har jeg utviklet en særlig interesse for spillutvikling og grafikkprogrammering. Jeg jobber for øyeblikket med et spillprosjekt kalt «Arabat»* på fritiden (tilgjengelig på min GitHub). \n\nUnder min tid i Luftforsvaret hadde jeg muligheten til å fly både enmotors fly og helikopter. Mitt langsiktige mål er å gjøre denne lidenskapen for luftfart til virkelighet ved å ta et privatflysertifikat (PPL)."
   },
   "socials": {
     "github": "https://github.com/Isakgraarud",
@@ -11,14 +11,14 @@
   },
   "education": [
     {
-      "name": "BSc in Informatics: Data Technology",
-      "meta": "University of Bergen (UiB) • 2024 – 2027",
+      "name": "BSc i informatikk: datateknologi",
+      "meta": "Universitetet i Bergen (UiB) • 2024 – 2027",
       "courses": [
-        {"name":  "", "meta": "2027" },
-        {"name":  "", "meta": "2027" },
-        {"name":  "", "meta": "2027" },
+        { "name": "", "meta": "2027" },
+        { "name": "", "meta": "2027" },
+        { "name": "", "meta": "2027" },
 
-        { "name":  "", "meta": "2026" },
+        { "name": "", "meta": "2026" },
         { "name": "INF226 – Software Security", "meta": "2026" },
         { "name": "INF214 – Concurrent Programming", "meta": "2026" },
 
@@ -40,8 +40,8 @@
       ]
     },
     {
-      "name": "Electrical Power and Electronic Communication",
-      "meta": "Elvebakken High School • 2019 – 2022",
+      "name": "Elektro, data og automatisering",
+      "meta": "Elvebakken videregående skole • 2019 – 2022",
       "courses": [
         { "name": "REA3064 – Programmering og modellering X", "meta": "2022" },
         { "name": "REA3038 – Fysikk 1", "meta": "2022" },
@@ -63,26 +63,26 @@
     {
       "title": "Visespesialist (OR2)",
       "company": "Luftforsvaret (Ørland flystasjon)",
-      "period": "April 2024 - August 2024",
+      "period": "April 2024 – august 2024",
       "description": "Operasjonsromsspesialist med ansvar for håndtering av besøkende flyvninger og daglig drift av flyplassen. Fungerte som befal for vernepliktige med ansvar for rominspeksjon og vaktplanlegging."
     },
     {
       "title": "Vernepliktig (OR1/OR1+)",
       "company": "Luftforsvaret (Bardufoss flyplass)",
-      "period": "April 2023 - April 2024",
+      "period": "April 2023 – april 2024",
       "description": "Drift av operasjonsrommet, håndtering av besøkende flyvninger, loggføring og allokering av slots."
     },
     {
       "title": "Barnehagevikar",
       "company": "Personalhuset Norway",
-      "period": "September 2022 - April 2023",
+      "period": "September 2022 – april 2023",
       "description": "Deltakelse i lek og aktiviteter, assistanse ved måltider/påkledning, og bidrag til trygghet og gode rutiner."
     },
     {
       "title": "Instruktør Allidrett",
       "company": "Sagene Idrettsforening",
-      "period": "August 2021 - August 2022",
-      "description": "Hovedansvar for grupper på ca. 30 barn (3-5 år). Forberedelse og ledelse av ulike fysiske aktiviteter."
+      "period": "August 2021 – august 2022",
+      "description": "Hovedansvar for grupper på ca. 30 barn (3–5 år). Forberedelse og ledelse av ulike fysiske aktiviteter."
     }
   ]
 }

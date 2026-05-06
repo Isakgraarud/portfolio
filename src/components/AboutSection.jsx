@@ -13,7 +13,7 @@ export default function AboutSection({ content }) {
   const { lang } = useLang()
   const ui = UI[lang]
 
-  const about   = content?.[lang]?.about
+  const about   = content?.about
   const image   = content?.about?.image
   const socials = content?.socials
 

@@ -100,8 +100,8 @@ export default function CareerSection({ content }) {
         <div className="career-reveal mb-16">
           <SectionLabel number="02" title={ui.sections.experience} />
           <div>
-            {content?.[lang]?.career
-              ? content[lang].career.map((job, i) => (
+            {content?.career
+              ? content.career.map((job, i) => (
                   <ExpandItem
                     key={i}
                     title={job.title ?? job.name}

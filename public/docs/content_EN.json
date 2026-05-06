@@ -1,0 +1,88 @@
+{
+  "about": {
+    "image": "images/CroppedUmbrellaInBergen.jpeg",
+    "intro": "I am a 23-year-old BSc student from Oslo, Norway. \n\nMy professional journey began at Elvebakken High School (Class of 2022), before continuing into the Royal Norwegian Air Force. I served as an OR1 before I was promoted to OR2 at the Wing Operations Centers in Bardufoss and Ørland. In the Air Force I developed a disciplined and structured approach to technical problem-solving under pressure, an approach I now try to apply to my BSc studies in Informatics: Data Technology.\n\n",
+    "story": "Beyond the classroom in Bergen, I am actively engaged in the student community. I serve as Treasurer/Finance Manager and Board Member of the ECHO Sports Club (ESC), where I am responsible for the economy and budgeting, in addition to leading our padel group. \n\nFurthermore, I am a board member of Hyggkom, where I help organize social activities that foster a healthy balance between demanding studies and a strong social environment within our faculty's reading rooms. \n\nI have always been interested in the technical aspects of the world, which have strongly influenced my choice of education. Recently, I have developed a particular interest in game development and graphics programming. I am currently working on a game project called "Arabat"* in my spare time (available on my GitHub). \n\nDuring my time in the Air Force, I had the opportunity to fly both single-engine aircraft and helicopters. My long-term ambition is to turn this passion for aviation into reality by obtaining a Private Pilot License (PPL)."
+  },
+  "socials": {
+    "github": "https://github.com/Isakgraarud",
+    "linkedin": "https://www.linkedin.com/in/isak-graarud",
+    "email": "mailto:isak.graarud@gmail.com"
+  },
+  "education": [
+    {
+      "name": "BSc in Informatics: Data Technology",
+      "meta": "University of Bergen (UiB) • 2024 – 2027",
+      "courses": [
+        { "name": "", "meta": "2027" },
+        { "name": "", "meta": "2027" },
+        { "name": "", "meta": "2027" },
+
+        { "name": "", "meta": "2026" },
+        { "name": "INF226 – Software Security", "meta": "2026" },
+        { "name": "INF214 – Concurrent Programming", "meta": "2026" },
+
+        { "name": "INF222 – Programming Languages", "meta": "2026" },
+        { "name": "Examen Philosophicum", "meta": "2026" },
+        { "name": "INF112 – Introduction to Systems Development", "meta": "2026" },
+
+        { "name": "INF122 – Functional Programming", "meta": "2025" },
+        { "name": "INF113 – Introduction to Operating Systems", "meta": "2025" },
+        { "name": "INF102 – Algorithms, Data Structures and Programming", "meta": "2025" },
+
+        { "name": "INF115 – Databases and Modelling", "meta": "2025" },
+        { "name": "MNF130 – Discrete Structures", "meta": "2025" },
+        { "name": "INF101 – Programming II", "meta": "2025" },
+
+        { "name": "MAT101 – Elementary Calculus I", "meta": "2024" },
+        { "name": "INF140 – Introduction to Cybersecurity", "meta": "2024" },
+        { "name": "INF100 – Introduction to Programming", "meta": "2024" }
+      ]
+    },
+    {
+      "name": "Electrical Power and Electronic Communication",
+      "meta": "Elvebakken High School • 2019 – 2022",
+      "courses": [
+        { "name": "REA3064 – Programming and Modelling X", "meta": "2022" },
+        { "name": "REA3038 – Physics 1", "meta": "2022" },
+        { "name": "NOR1211/12/13 – Norwegian (Written, Secondary, Oral)", "meta": "2022" },
+        { "name": "HIS1003 – History", "meta": "2022" },
+        { "name": "SAK1001 – Social Studies", "meta": "2022" },
+        { "name": "REA3022 – Mathematics R1", "meta": "2021" },
+        { "name": "ELE2001/2/3 – Electrical Energy, Automation and Data Systems Vg2", "meta": "2021" },
+        { "name": "ELE2004 – Interdisciplinary Exam", "meta": "2021" },
+        { "name": "ENG1009 – English", "meta": "2021" },
+        { "name": "MAT1013 – Mathematics 1T", "meta": "2020" },
+        { "name": "NAT1002 – Natural Science", "meta": "2020" },
+        { "name": "ELE1001/2/3 – Data, Electrical Energy and Automation Systems Vg1", "meta": "2020" },
+        { "name": "YFF4106/4207 – Vocational Specialization (Vg1 & Vg2)", "meta": "2020–2021" }
+      ]
+    }
+  ],
+  "career": [
+    {
+      "title": "Deputy Specialist (OR2)",
+      "company": "Royal Norwegian Air Force (Ørland Air Station)",
+      "period": "April 2024 – August 2024",
+      "description": "Operations room specialist responsible for handling visiting flights and daily airport operations. Served as NCO for conscripts with responsibilities including room inspection and duty scheduling."
+    },
+    {
+      "title": "Conscript (OR1/OR1+)",
+      "company": "Royal Norwegian Air Force (Bardufoss Airport)",
+      "period": "April 2023 – April 2024",
+      "description": "Operations room management, handling visiting flights, logging, and slot allocation."
+    },
+    {
+      "title": "Kindergarten Substitute",
+      "company": "Personalhuset Norway",
+      "period": "September 2022 – April 2023",
+      "description": "Participation in play and activities, assisting during meals and dressing, contributing to a safe and structured daily routine."
+    },
+    {
+      "title": "All-Sports Instructor",
+      "company": "Sagene Idrettsforening",
+      "period": "August 2021 – August 2022",
+      "description": "Primary responsibility for groups of approximately 30 children (ages 3–5). Preparation and facilitation of various physical activities."
+    }
+  ]
+}
