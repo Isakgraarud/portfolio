@@ -56,6 +56,14 @@ export default function AboutSection({ content }) {
               {about?.story}
             </p>
 
+            {/* AI Native callout */}
+            {about?.aiNative && (
+              <div className="about-reveal mt-8 border-l-2 border-accent pl-5 py-1">
+                <span className="block font-mono text-[9px] tracking-[0.2em] text-accent mb-2">AI_NATIVE</span>
+                <p className="text-sm text-text/70 leading-relaxed">{about.aiNative}</p>
+              </div>
+            )}
+
             {/* Social links */}
             <div className="about-reveal flex flex-wrap gap-3 mt-8">
               {[

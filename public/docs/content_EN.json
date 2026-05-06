@@ -1,8 +1,9 @@
 {
   "about": {
     "image": "images/CroppedUmbrellaInBergen.jpeg",
-    "intro": "I am a 23-year-old BSc student from Oslo, Norway. \n\nMy professional journey began at Elvebakken High School (Class of 2022), before continuing into the Royal Norwegian Air Force. I served as an OR1 before I was promoted to OR2 at the Wing Operations Centers in Bardufoss and Ørland. In the Air Force I developed a disciplined and structured approach to technical problem-solving under pressure, an approach I now try to apply to my BSc studies in Informatics: Data Technology.\n\n",
-    "story": "Beyond the classroom in Bergen, I am actively engaged in the student community. I serve as Treasurer/Finance Manager and Board Member of the ECHO Sports Club (ESC), where I am responsible for the economy and budgeting, in addition to leading our padel group. \n\nFurthermore, I am a board member of Hyggkom, where I help organize social activities that foster a healthy balance between demanding studies and a strong social environment within our faculty's reading rooms. \n\nI have always been interested in the technical aspects of the world, which have strongly influenced my choice of education. Recently, I have developed a particular interest in game development and graphics programming. I am currently working on a game project called "Arabat"* in my spare time (available on my GitHub). \n\nDuring my time in the Air Force, I had the opportunity to fly both single-engine aircraft and helicopters. My long-term ambition is to turn this passion for aviation into reality by obtaining a Private Pilot License (PPL)."
+    "intro": "Software engineering student at UiB with an uncommon background: before university, I managed real-time airspace operations as a specialist in the Royal Norwegian Air Force.\n\nThat environment — high stakes, zero tolerance for error, constant coordination under pressure — shaped a work ethic I now bring directly into software. I build carefully, communicate clearly, and take accountability seriously.",
+    "story": "On campus I hold real responsibility: I serve as Treasurer of the ECHO Sports Club, managing the club's finances and budget independently. As a board member of Hyggkom, I help organise the student environment across our faculty's reading rooms.\n\nMy technical passion sits at the intersection of systems and graphics. I'm currently building Arabat — a game project on GitHub that has pulled me deep into engine architecture, rendering pipelines, and performance-critical code.\n\nI learn fast, build independently, and I don't wait for permission to figure things out.",
+    "aiNative": "AI is part of my workflow, not a novelty. I use LLMs to write better code, debug faster, challenge my own architecture decisions, and compress learning curves. Developers who genuinely master working alongside AI will have a structural advantage — I'm building that fluency now, not later."
   },
   "socials": {
     "github": "https://github.com/Isakgraarud",
@@ -61,28 +62,28 @@
   ],
   "career": [
     {
-      "title": "Deputy Specialist (OR2)",
-      "company": "Royal Norwegian Air Force (Ørland Air Station)",
+      "title": "Operations Specialist (OR2)",
+      "company": "Royal Norwegian Air Force — Ørland Air Station",
       "period": "April 2024 – August 2024",
-      "description": "Operations room specialist responsible for handling visiting flights and daily airport operations. Served as NCO for conscripts with responsibilities including room inspection and duty scheduling."
+      "description": "Managed daily flight operations at one of Norway's primary F-35 bases. Coordinated incoming and departing aircraft, maintained operational logs, and led a team of conscripts as their NCO — responsible for readiness, inspections, and duty scheduling."
     },
     {
       "title": "Conscript (OR1/OR1+)",
-      "company": "Royal Norwegian Air Force (Bardufoss Airport)",
+      "company": "Royal Norwegian Air Force — Bardufoss Airport",
       "period": "April 2023 – April 2024",
-      "description": "Operations room management, handling visiting flights, logging, and slot allocation."
+      "description": "Operated the Wing Operations Centre in a safety-critical environment. Handled real-time flight requests, maintained precise logs, and allocated landing slots — all under time pressure with no margin for error."
     },
     {
       "title": "Kindergarten Substitute",
       "company": "Personalhuset Norway",
       "period": "September 2022 – April 2023",
-      "description": "Participation in play and activities, assisting during meals and dressing, contributing to a safe and structured daily routine."
+      "description": "Supervised children independently across full shifts, managing daily routines, welfare, and safety with full accountability."
     },
     {
       "title": "All-Sports Instructor",
       "company": "Sagene Idrettsforening",
       "period": "August 2021 – August 2022",
-      "description": "Primary responsibility for groups of approximately 30 children (ages 3–5). Preparation and facilitation of various physical activities."
+      "description": "Solo instructor for groups of ~30 children aged 3–5. Designed and led structured physical sessions, adapting on the fly to group dynamics and energy levels."
     }
   ]
 }

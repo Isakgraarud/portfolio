@@ -1,8 +1,9 @@
 {
   "about": {
     "image": "images/CroppedUmbrellaInBergen.jpeg",
-    "intro": "Jeg er en 23 år gammel bachelorstudent fra Oslo, Norge. \n\nMin faglige reise begynte på Elvebakken videregående skole (avgang 2022), før jeg fortsatte til Luftforsvaret. Jeg tjenestegjorde som OR1 før jeg ble forfremmet til OR2 ved Wing Operations Centers på Bardufoss og Ørland. I Forsvaret utviklet jeg en disiplinert og strukturert tilnærming til teknisk problemløsning under press – en tilnærming jeg nå forsøker å anvende i mitt bachelorstudium i informatikk: datateknologi.\n\n",
-    "story": "Utenfor klasserommet i Bergen er jeg aktivt engasjert i studentmiljøet. Jeg er kasserer/økonomiansvarlig og styremedlem i ECHO Sports Club (ESC), der jeg er ansvarlig for økonomi og budsjettering, samt leder av padelgruppen vår. \n\nVidere er jeg styremedlem i Hyggkom, der jeg bidrar til å organisere sosiale aktiviteter som fremmer en god balanse mellom krevende studier og et sterkt sosialt miljø i fakultetets lesesaler. \n\nJeg har alltid vært interessert i de tekniske aspektene ved verden, noe som har hatt stor innflytelse på mitt utdanningsvalg. Den siste tiden har jeg utviklet en særlig interesse for spillutvikling og grafikkprogrammering. Jeg jobber for øyeblikket med et spillprosjekt kalt «Arabat»* på fritiden (tilgjengelig på min GitHub). \n\nUnder min tid i Luftforsvaret hadde jeg muligheten til å fly både enmotors fly og helikopter. Mitt langsiktige mål er å gjøre denne lidenskapen for luftfart til virkelighet ved å ta et privatflysertifikat (PPL)."
+    "intro": "Informatikkstudent ved UiB med en uvanlig bakgrunn: før universitetet ledet jeg sanntids flyplassoperasjoner som spesialist i Luftforsvaret.\n\nDet miljøet — høye innsatser, null toleranse for feil, konstant koordinering under press — formet en arbeidsmoral jeg nå tar direkte med meg inn i programvare. Jeg bygger nøye, kommuniserer tydelig og tar ansvar på alvor.",
+    "story": "På campus har jeg reelt ansvar: jeg er kasserer i ECHO Sports Club og håndterer klubbens økonomi og budsjett selvstendig. Som styremedlem i Hyggkom bidrar jeg til å organisere studentmiljøet på tvers av fakultetets lesesaler.\n\nMin tekniske lidenskap ligger i skjæringspunktet mellom systemer og grafikk. Jeg bygger for tiden Arabat — et spillprosjekt på GitHub som har ført meg dypt inn i motorarkitektur, renderingspipelines og ytelseskritisk kode.\n\nJeg lærer raskt, bygger selvstendig og venter ikke på tillatelse til å finne ut av ting.",
+    "aiNative": "AI er en del av arbeidsflyten min, ikke en nyhet. Jeg bruker LLM-er til å skrive bedre kode, feilsøke raskere, utfordre egne arkitekturvalg og komprimere læringskurver. Utviklere som virkelig mestrer å jobbe side om side med AI vil ha et strukturelt fortrinn — jeg bygger den kompetansen nå, ikke senere."
   },
   "socials": {
     "github": "https://github.com/Isakgraarud",
@@ -61,28 +62,28 @@
   ],
   "career": [
     {
-      "title": "Visespesialist (OR2)",
-      "company": "Luftforsvaret (Ørland flystasjon)",
-      "period": "April 2024 – august 2024",
-      "description": "Operasjonsromsspesialist med ansvar for håndtering av besøkende flyvninger og daglig drift av flyplassen. Fungerte som befal for vernepliktige med ansvar for rominspeksjon og vaktplanlegging."
+      "title": "Operasjonsspesialist (OR2)",
+      "company": "Luftforsvaret — Ørland flystasjon",
+      "period": "April 2024 – August 2024",
+      "description": "Driftet daglige flyoperasjoner ved en av Norges primære F-35-baser. Koordinerte innkommende og utgående fly, vedlikeholdt operasjonslogger og ledet et team av vernepliktige som befal — ansvarlig for beredskap, inspeksjoner og vaktplanlegging."
     },
     {
       "title": "Vernepliktig (OR1/OR1+)",
-      "company": "Luftforsvaret (Bardufoss flyplass)",
-      "period": "April 2023 – april 2024",
-      "description": "Drift av operasjonsrommet, håndtering av besøkende flyvninger, loggføring og allokering av slots."
+      "company": "Luftforsvaret — Bardufoss flyplass",
+      "period": "April 2023 – April 2024",
+      "description": "Opererte Wing Operations Centre i et sikkerhetskritisk miljø. Håndterte sanntids flyforespørsler, vedlikeholdt nøyaktige logger og tildelte landingsslots — alt under tidspress uten rom for feil."
     },
     {
       "title": "Barnehagevikar",
       "company": "Personalhuset Norway",
-      "period": "September 2022 – april 2023",
-      "description": "Deltakelse i lek og aktiviteter, assistanse ved måltider/påkledning, og bidrag til trygghet og gode rutiner."
+      "period": "September 2022 – April 2023",
+      "description": "Ledet barnegrupper selvstendig gjennom hele vakter med fullt ansvar for daglige rutiner, velferd og sikkerhet."
     },
     {
       "title": "Instruktør Allidrett",
       "company": "Sagene Idrettsforening",
-      "period": "August 2021 – august 2022",
-      "description": "Hovedansvar for grupper på ca. 30 barn (3–5 år). Forberedelse og ledelse av ulike fysiske aktiviteter."
+      "period": "August 2021 – August 2022",
+      "description": "Eneste instruktør for grupper på ~30 barn (3–5 år). Planla og ledet strukturerte aktivitetsøkter, og tilpasset opplegget fortløpende etter gruppedynamikk og energinivå."
     }
   ]
 }
