@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import Spline from '@splinetool/react-spline'
 import { motion } from 'motion/react'
 import { useLang, UI } from '../contexts/LanguageContext.jsx'
+import VantaBackground from './VantaBackground.jsx'
 
 class SplineBoundary extends Component {
   state = { failed: false }
@@ -14,7 +15,7 @@ class SplineBoundary extends Component {
 const SCRAMBLE_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$_><[]'
 
 function scramble(el, target, delay = 0) {
-  const totalFrames = 52
+  const totalFrames = 102
   let frame = 0
   setTimeout(() => {
     const tick = () => {
@@ -136,7 +137,7 @@ export default function HeroSection({ content }) {
       className="relative w-full min-h-screen flex flex-col justify-center overflow-hidden"
     >
       {/* Backgrounds */}
-      <div className="absolute inset-0 dot-grid" />
+      <VantaBackground />
       <div className="absolute inset-0 center-glow" />
 
       <div className="relative z-10 w-full max-w-[1400px] mx-auto px-8 lg:px-16 pt-24 lg:pt-20 pb-20">

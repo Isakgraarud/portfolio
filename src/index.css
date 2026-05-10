@@ -22,7 +22,7 @@
 }
 
 html.light {
-  --color-bg:            248 248 245;
+  --color-bg:            249 249 245;
   --color-surface:       230 230 226;
   --color-elevated:      208 208 202;
   --color-border:        172 172 165;
@@ -30,7 +30,7 @@ html.light {
   --color-text:          10 10 10;
   --color-muted:         55 55 55;
   --color-muted-bright:  95 95 95;
-  --color-accent:        102 255 51;
+  --color-accent:        65 142 225;
 
   --dot-color:           rgba(0, 0, 0, 0.12);
   --glow-center:         rgba(72, 28, 170, 0.07);

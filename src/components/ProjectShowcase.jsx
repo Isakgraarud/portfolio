@@ -13,10 +13,32 @@ const PROJECTS = [
       'images/zoombigedon/zoombigedon-screenshot-3.png',
     ],
   },
-  { id: 'ph1', label: 'PLACEHOLDER 01', tech: '—', github: null, photos: [] },
-  { id: 'ph2', label: 'PLACEHOLDER 02', tech: '—', github: null, photos: [] },
-  { id: 'ph3', label: 'PLACEHOLDER 03', tech: '—', github: null, photos: [] },
-  { id: 'ph4', label: 'PLACEHOLDER 04', tech: '—', github: null, photos: [] },
+  {
+    id: 'algorithm-visualizer',
+    label: 'ALGORITHM VISUALIZER',
+    tech: 'Python · tkinter',
+    github: 'https://github.com/Isakgraarud/Algorithm-Visualizer',
+    photos: [
+      'images/AlgorithmVisualizer/Screenshot 2026-05-10 at 22.59.18.png',
+      'images/AlgorithmVisualizer/Screenshot 2026-05-10 at 22.59.48.png',
+      'images/AlgorithmVisualizer/Screenshot 2026-05-10 at 23.00.01.png',
+      'images/AlgorithmVisualizer/Screenshot 2026-05-10 at 23.00.16.png',
+      'images/AlgorithmVisualizer/Screenshot 2026-05-10 at 23.00.33.png',
+      'images/AlgorithmVisualizer/Screenshot 2026-05-10 at 23.00.58.png',
+    ],
+  },
+  {
+    id: 'spacejanitor',
+    label: 'SpaceJanitor',
+    tech: 'java · LibGDX',
+    github: 'https://github.com/Isakgraarud/Isakgraarud-SpaceJanitor',
+    photos: [
+      'images/SpaceJanitor/Screenshot 2026-03-16 at 12.45.00.png',
+      'images/SpaceJanitor/Screenshot 2026-03-16 at 12.45.18.png',
+      'images/SpaceJanitor/Screenshot 2026-03-16 at 12.45.21.png',
+    ]
+  },
+  // { id: 'ph4', label: 'PLACEHOLDER 01', tech: '—', github: null, photos: [] },
 ]
 
 const base = import.meta.env.BASE_URL
