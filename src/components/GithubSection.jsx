@@ -70,7 +70,7 @@ export default function GithubSection({ content }) {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 font-mono text-[10px] tracking-[0.15em]
-                       px-8 py-4 bg-accent text-bg font-semibold
+                       px-8 py-4 bg-accent text-black font-semibold
                        hover:bg-accent/90 transition-all duration-200 shrink-0"
             whileHover={{ scale: 1.02, y: -1 }}
             whileTap={{ scale: 0.98 }}

@@ -172,7 +172,7 @@ export default function HeroSection({ content }) {
               >
                 ____
               </span>
-              <span className="flex items-end gap-1.5 sm:gap-2">
+              <span className="flex items-end gap-2.5 sm:gap-2">
                 <span
                   ref={surnameRef}
                   className="block text-[14vw] sm:text-[11.5vw] lg:text-[9vw] xl:text-[8vw] text-accent"
@@ -181,24 +181,11 @@ export default function HeroSection({ content }) {
                 </span>
                 {/* Blinking cursor */}
                 <span
-                  className="inline-block w-[0.06em] bg-accent animate-blink mb-[0.04em]"
-                  style={{ height: '0.82em' }}
+                  className="inline-block w-[4.06em] bg-accent animate-blink mb-[1.24em]"
+                  style={{ height: '0.52em' }}
                 />
               </span>
             </h1>
-
-            {/* Tag pills */}
-            <div className="flex flex-wrap gap-2 mt-8 lg:mt-10">
-              {(content?.hero?.tags ?? []).map(tag => (
-                <span
-                  key={tag}
-                  className="h-tag font-mono text-[10px] px-3 py-1 border border-border-bright text-muted
-                             hover:border-accent/50 hover:text-text/80 transition-all duration-300 cursor-default"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
           </div>
 
           {/* ── Right: Spline 3D + annotations ──────────────────── */}
@@ -225,41 +212,16 @@ export default function HeroSection({ content }) {
                 <p key={n} className="h-note">{n}</p>
               ))}
             </div>
+            </div>
+            {/* SCROLL indicator — bottom left */}
+            <div className="h-bottom absolute bottom-8 left-8 flex items-center gap-3">
+              <div className="relative w-px h-10 bg-border overflow-hidden">
+                <div className="absolute inset-0 bg-accent animate-scrollLine" />
+              </div>
+              <span className="font-mono text-[10px] text-muted tracking-[0.22em]">{ui.hero.scroll}</span>
           </div>
         </div>
-
-        {/* Divider line */}
-        <div className="mt-16 lg:mt-20 flex items-center gap-4">
-          <div className="flex-1 h-px bg-border" />
-          <span className="h-bottom font-mono text-[10px] text-muted tracking-[0.22em]">
-            {ui.hero.scrollExplore}
-          </span>
-          <div className="w-8 h-px bg-border" />
-        </div>
       </div>
-
-      {/* SCROLL indicator — bottom left */}
-      <div className="h-bottom absolute bottom-8 left-8 flex items-center gap-3">
-        <div className="relative w-px h-10 bg-border overflow-hidden">
-          <div className="absolute inset-0 bg-accent animate-scrollLine" />
-        </div>
-        <span className="font-mono text-[10px] text-muted tracking-[0.22em]">{ui.hero.scroll}</span>
-      </div>
-
-      {/* CV download — bottom right */}
-      <motion.a
-        href={`${import.meta.env.BASE_URL}docs/testFile.pdf`}
-        download
-        className="h-bottom absolute bottom-8 right-8 font-mono text-[10px] text-muted hover:text-accent flex items-center gap-2 group transition-colors"
-        whileHover={{ scale: 1.04 }}
-      >
-        <span className="tracking-[0.15em]">CV_2025.PDF</span>
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-          <path d="M5 1v5.5M2.5 4L5 6.5 7.5 4M1 9h8"
-            stroke="currentColor" strokeWidth="1.2"
-            strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </motion.a>
     </section>
   )
 }

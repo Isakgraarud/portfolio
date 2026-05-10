@@ -25,7 +25,7 @@ function ExpandItem({ title, meta, children }) {
 
         <div className="flex-1 min-w-0">
           <span
-            className={`font-sans font-semibold text-base transition-colors duration-200 ${open ? 'text-accent' : 'text-text'}`}
+            className={`font-sans font-semibold text-base transition-colors duration-200 ${open ? 'text-accent' : 'text-text group-hover:text-accent'}`}
           >
             {title}
           </span>
@@ -149,26 +149,6 @@ export default function CareerSection({ content }) {
               : <p className="font-mono text-xs text-muted">Loading…</p>
             }
           </div>
-        </div>
-
-        {/* CV download */}
-        <div className="career-reveal">
-          <motion.a
-            href={`${import.meta.env.BASE_URL}docs/testFile.pdf`}
-            download
-            className="inline-flex items-center gap-3 font-mono text-[10px] tracking-[0.15em]
-                       px-6 py-3 border border-accent/40 text-accent
-                       hover:bg-accent hover:text-bg transition-all duration-200"
-            whileHover={{ scale: 1.02, y: -1 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            {ui.downloadCV}
-            <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-              <path d="M5.5 1v6M3 4.5l2.5 2.5 2.5-2.5M1 10h9"
-                stroke="currentColor" strokeWidth="1.2"
-                strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </motion.a>
         </div>
       </div>
     </section>

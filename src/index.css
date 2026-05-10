@@ -5,37 +5,37 @@
 /* ── Theme tokens ─────────────────────────────────────── */
 :root {
   /* Dark mode (default) — RGB triplets for Tailwind opacity support */
-  --color-bg:            10 10 13;
-  --color-surface:       17 17 22;
-  --color-elevated:      24 24 31;
-  --color-border:        30 30 38;
-  --color-border-bright: 46 46 58;
-  --color-text:          240 240 238;
-  --color-muted:         85 85 95;
-  --color-muted-bright:  136 136 144;
+  --color-bg:            14 14 18;
+  --color-surface:       26 26 35;
+  --color-elevated:      42 42 56;
+  --color-border:        65 65 85;
+  --color-border-bright: 95 95 120;
+  --color-text:          255 255 255;
+  --color-muted:         220 220 220;
+  --color-muted-bright:  165 165 175;
   --color-accent:        202 255 51;
 
-  --dot-color:           rgba(255, 255, 255, 0.055);
-  --glow-center:         rgba(72, 28, 170, 0.13);
-  --glow-mid:            rgba(30, 20, 80, 0.06);
-  --glow-section:        rgba(72, 28, 170, 0.08);
+  --dot-color:           rgba(255, 255, 255, 0.07);
+  --glow-center:         rgba(72, 28, 170, 0.18);
+  --glow-mid:            rgba(30, 20, 80, 0.09);
+  --glow-section:        rgba(72, 28, 170, 0.12);
 }
 
 html.light {
   --color-bg:            248 248 245;
-  --color-surface:       238 238 235;
-  --color-elevated:      225 225 220;
-  --color-border:        195 195 190;
-  --color-border-bright: 165 165 160;
-  --color-text:          10 10 13;
-  --color-muted:         110 110 115;
-  --color-muted-bright:  75 75 80;
+  --color-surface:       230 230 226;
+  --color-elevated:      208 208 202;
+  --color-border:        172 172 165;
+  --color-border-bright: 135 135 128;
+  --color-text:          10 10 10;
+  --color-muted:         55 55 55;
+  --color-muted-bright:  95 95 95;
   --color-accent:        102 255 51;
 
-  --dot-color:           rgba(0, 0, 0, 0.15);
-  --glow-center:         rgba(72, 28, 170, 0.04);
-  --glow-mid:            rgba(30, 20, 80, 0.02);
-  --glow-section:        rgba(72, 28, 170, 0.03);
+  --dot-color:           rgba(0, 0, 0, 0.12);
+  --glow-center:         rgba(72, 28, 170, 0.07);
+  --glow-mid:            rgba(30, 20, 80, 0.04);
+  --glow-section:        rgba(72, 28, 170, 0.05);
 }
 
 @layer base {
@@ -82,3 +82,4 @@ html.light {
     transparent 70%
   );
 }
+

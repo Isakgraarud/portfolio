@@ -83,7 +83,7 @@ export default function Header() {
               <li key={id}>
                 <button
                   onClick={() => scrollTo(id)}
-                  className="font-mono text-[10px] tracking-[0.2em] text-muted hover:text-text transition-colors duration-200"
+                  className="font-mono text-[10px] tracking-[0.2em] text-muted hover:text-accent transition-colors duration-200"
                 >
                   {label}
                 </button>
