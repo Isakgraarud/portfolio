@@ -1,6 +1,6 @@
 {
   "about": {
-    "image": "images/CroppedUmbrellaInBergen.jpeg",
+    "image": "images/profilbildet.png",
     "intro": "Software engineering student at UiB with an uncommon background: before university, I managed real-time airspace operations as a specialist in the Royal Norwegian Air Force.\n\nThat environment — high stakes, zero tolerance for error, constant coordination under pressure — shaped a work ethic I now bring directly into software. I build carefully, communicate clearly, and take accountability seriously.",
     "story": "On campus I hold real responsibility: I serve as Treasurer of the ECHO Sports Club, managing the club's finances and budget independently. As a board member of Hyggkom, I help organise the student environment across our faculty's reading rooms.\n\nMy technical passion sits at the intersection of systems and graphics. I'm currently building Arabat — a game project on GitHub that has pulled me deep into engine architecture, rendering pipelines, and performance-critical code.\n\nI learn fast, build independently, and I don't wait for permission to figure things out.",
     "aiNative": "AI is part of my workflow, not a novelty. I use LLMs to write better code, debug faster, challenge my own architecture decisions, and compress learning curves. Developers who genuinely master working alongside AI will have a structural advantage — I'm building that fluency now, not later."

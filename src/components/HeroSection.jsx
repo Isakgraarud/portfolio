@@ -2,7 +2,6 @@ import { useRef, useEffect, useState, Suspense, Component } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Spline from '@splinetool/react-spline'
-import { motion } from 'motion/react'
 import { useLang, UI } from '../contexts/LanguageContext.jsx'
 import VantaBackground from './VantaBackground.jsx'
 
