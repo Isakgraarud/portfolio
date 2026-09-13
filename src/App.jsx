@@ -27,16 +27,16 @@ function AppContent() {
   return (
     <div className="min-h-screen bg-bg text-text font-sans">
       <Header />
-      <HeroSection content={content} />
-      <AboutSection content={content} />
-      <CareerSection content={content} />
-      <GithubSection content={content} />
-      <footer className="border-t border-border py-8 px-8">
-        <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-4">
-          <span className="font-mono text-[10px] text-muted tracking-[0.15em]">ISAK_GRAARUD © 2025</span>
-          <span className="font-mono text-[10px] text-muted tracking-[0.15em]">REACT · GSAP · SPLINE · MOTION</span>
-        </div>
-      </footer>
+        {/*<HeroSection content={content} />*/}
+        <AboutSection content={content} />
+        <CareerSection content={content} />
+        <GithubSection content={content} />
+        <footer className="border-t border-border py-8 px-8">
+            <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-4">
+              <span className="font-mono text-[10px] text-muted tracking-[0.15em]">ISAK_GRAARUD © 2025</span>
+              <span className="font-mono text-[10px] text-muted tracking-[0.15em]">REACT · GSAP · SPLINE · MOTION</span>
+            </div>
+        </footer>
     </div>
   )
 }

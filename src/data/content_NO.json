@@ -1,9 +1,9 @@
 {
   "about": {
     "image": "images/profilbildet.png",
-    "intro": "Informatikkstudent ved UiB med en uvanlig bakgrunn: før universitetet ledet jeg sanntids flyplassoperasjoner som spesialist i Luftforsvaret.\n\nDet miljøet — høye innsatser, null toleranse for feil, konstant koordinering under press — formet en arbeidsmoral jeg nå tar direkte med meg inn i programvare. Jeg bygger nøye, kommuniserer tydelig og tar ansvar på alvor.",
-    "story": "På campus har jeg reelt ansvar: jeg er kasserer i ECHO Sports Club og håndterer klubbens økonomi og budsjett selvstendig. Som styremedlem i Hyggkom bidrar jeg til å organisere studentmiljøet på tvers av fakultetets lesesaler.\n\nMin tekniske lidenskap ligger i skjæringspunktet mellom systemer og grafikk. Jeg bygger for tiden Arabat — et spillprosjekt på GitHub som har ført meg dypt inn i motorarkitektur, renderingspipelines og ytelseskritisk kode.\n\nJeg lærer raskt, bygger selvstendig og venter ikke på tillatelse til å finne ut av ting.",
-    "aiNative": "AI er en del av arbeidsflyten min, ikke en nyhet. Jeg bruker LLM-er til å skrive bedre kode, feilsøke raskere, utfordre egne arkitekturvalg og komprimere læringskurver. Utviklere som virkelig mestrer å jobbe side om side med AI vil ha et strukturelt fortrinn — jeg bygger den kompetansen nå, ikke senere."
+    "intro": "Informatikkstudent ved Universitetet i Bergen. Før jeg startet på UiB, jobbet jeg som spesialist i Luftforsvaret.",
+    "story": "På campus er jeg aktiv i echo (linjeforeningen for informatikk), der jeg er økonomiansvarlig i echo Sports Club med ansvar for undergruppens økonomi og budsjett. Jeg sitter også som styremedlem i Hyggkom, der jeg bidrar til å organisere studentmiljøet på tvers av fakultetets lesesaler.",
+    "aiNative": "Jeg bruker AI aktivt på fritiden i sideprosjektene mine, både til å skrive bedre kode, feilsøke raskere og lære meg nye ting. Jeg tror de som blir gode på å forstå hvordan LLM-er fungerer, får en fordel."
   },
   "socials": {
     "github": "https://github.com/Isakgraarud",

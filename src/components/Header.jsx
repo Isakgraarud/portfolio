@@ -45,19 +45,6 @@ export default function Header() {
 
   return (
     <>
-      {/* Theme toggle — fixed far top-left */}
-      <motion.button
-        onClick={toggleTheme}
-        className="fixed top-4 right-4 z-[60] w-8 h-8 flex items-center justify-center
-                   text-muted hover:text-text border border-transparent hover:border-border-bright
-                   transition-all duration-200"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        aria-label="Toggle theme"
-      >
-        {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-      </motion.button>
-
       <header
         className={`fixed top-0 z-50 w-full transition-all duration-500 ${
           scrolled
@@ -65,7 +52,7 @@ export default function Header() {
             : 'bg-transparent'
         }`}
       >
-        <nav className="flex items-center justify-between w-full max-w-[1400px] mx-auto px-8 py-4">
+        <nav className="flex items-center justify-between w-full max-w-[1400px] mx-auto px-5 sm:px-8 py-4">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="font-mono text-xs tracking-[0.25em] text-text hover:text-accent transition-colors duration-200"
@@ -73,7 +60,7 @@ export default function Header() {
             IG_
           </button>
 
-          <ul className="flex gap-8 list-none">
+          <ul className="hidden md:flex gap-8 list-none">
             {[
               { id: 'about',    label: ui.nav.about },
               { id: 'projects', label: ui.nav.projects },
@@ -91,7 +78,7 @@ export default function Header() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <button
               onClick={toggle}
               className="font-mono text-[10px] tracking-[0.18em] px-3 py-1.5 border border-border-bright text-muted
@@ -101,7 +88,7 @@ export default function Header() {
             </button>
 
             <motion.a
-              href={`${import.meta.env.BASE_URL}docs/testFile.pdf`}
+              href={`${import.meta.env.BASE_URL}docs/CV - ISAK GRAARUD.pdf`}
               download
               className="font-mono text-[10px] tracking-[0.18em] px-3 py-1.5 border border-accent/50 text-accent hover:bg-accent hover:text-bg transition-all duration-200"
               whileHover={{ scale: 1.03 }}
@@ -109,6 +96,18 @@ export default function Header() {
             >
               CV.PDF
             </motion.a>
+
+            <motion.button
+              onClick={toggleTheme}
+              className="w-8 h-8 flex items-center justify-center shrink-0
+                         text-muted hover:text-text border border-transparent hover:border-border-bright
+                         transition-all duration-200"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+            </motion.button>
           </div>
         </nav>
       </header>
